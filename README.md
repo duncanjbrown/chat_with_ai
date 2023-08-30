@@ -20,6 +20,17 @@ Start django:
 
 `python manage.py startapp`
 
+## Seed data
+
+You will require an AIModel record for gpt3.5-turbo - add this via the console
+
+```
+python manage.py shell
+
+>>> m = AIModel(name="gpt3.5-turbo",input_token_cost="20", completion_token_cost="40")
+>>> m.save()
+```
+
 ## Running the Slack bot
 
 Running this app in development requires [ngrok](https://ngrok.com/).
