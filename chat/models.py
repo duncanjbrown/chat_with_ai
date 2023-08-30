@@ -19,6 +19,8 @@ class AIModel(models.Model):
     input_token_cost = models.IntegerField()
     completion_token_cost = models.IntegerField()
 
+    class Meta:
+        verbose_name = "AI model"
 
 class Chat(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
